@@ -9,7 +9,7 @@ node{
   }
 
   stage ('Build') {
-    def nodeHome = tool "latest_node"
+    def nodeHome = tool "node_latest"
     env.PATH = "${nodeHome}/bin:${env.PATH}"
     sh 'cd mean && npm install'
   }
