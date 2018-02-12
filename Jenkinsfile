@@ -11,7 +11,7 @@ node{
   stage ('Build') {
     def nodeHome = tool "node_latest"
     env.PATH = "${nodeHome}/bin:${env.PATH}"
-    sh 'cd mean && npm install'
+    sh 'cd mean_demo_app && npm install'
   }
 
   stage ('Deploy') {
