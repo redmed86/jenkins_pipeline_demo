@@ -5,13 +5,11 @@ node{
   stage ('Checkout') {
     //checkout the ctsupport.bot project
     checkout scm
-    echo "BRANCH: " + branch
+    echo "You are building the following branch: " + branch
   }
 
   stage ('Build') {
-    def nodeHome = tool "node_latest"
-    env.PATH = "${nodeHome}/bin:${env.PATH}"
-    sh 'cd mean_demo_app && npm install'
+    echo 'This is where your build code goes.  You can build maven, nodejs, docker, go, or anyother project that you can build with a cli.'
   }
 
   stage ('Deploy') {
