@@ -9,9 +9,9 @@ node{
   }
 
   stage ('Build') {
-    // def nodeHome = tool "nodejs-7.9.0"
-    // env.PATH = "${nodeHome}/bin:${env.PATH}"
-    // sh 'npm install'
+    def nodeHome = tool "latest_node"
+    env.PATH = "${nodeHome}/bin:${env.PATH}"
+    sh 'cd mean && npm install'
   }
 
   stage ('Deploy') {
