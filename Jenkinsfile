@@ -1,5 +1,5 @@
 #!/usr/bin/env groovy
-node('mesos'){
+node{
   def branch = "${env.BRANCH_NAME}"
 
   stage ('Checkout') {
