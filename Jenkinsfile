@@ -17,9 +17,8 @@ node{
   }
 
   stage('Custom Test Script Execution'){
-    sh './testScript.sh'
+    echo './testScript.sh'
   }
-  //sh "curl -X POST http://cmjenkins1.internal.t-mobile.com:8080/job/EQRE-E2E/view/Notifications/job/Notification_DLAB01/build?token=edpcatesting -d '{\"callback\":\"${env.BUILD_URL}input/Async-input/proceedEmpty\"}'"
 
   input 'Waiting for test results'
 }
